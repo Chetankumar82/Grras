@@ -1,0 +1,14 @@
+div {
+    color: red;
+}
+
+#demo {
+    color: blue;
+}
+
+.demo {
+    color: green;
+}
+
+/* inline, internal, external */
+/* id, class, tag-name */

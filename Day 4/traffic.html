@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Light</title>
+    <style>
+        :root {
+            --height-main: 425px;
+            --width-main: 200px;
+
+            --background-colors: white;
+
+            --red-signal: red;
+            --green-signal: green;
+
+            --height-signal: 200px;
+            --width-signal: 200px;
+
+            --box-shadow: 0px 0px 10px 5px;
+        }
+
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            flex-direction: column;
+            height: 96vh;
+            margin-left: 100px;
+            transform: translateX(100px);
+        }
+
+        #main_box {
+            border: 1px solid white;
+            height: var(--height-main);
+            width: var(--width-main);
+            padding: 30px;
+            background-color: var(--background-colors);
+            border-radius: 20px;
+
+        }
+
+        #red,
+        #green {
+            height: var(--height-signal);
+            width: var(--width-signal);
+            border: 1px solid white;
+            border-radius: 100%;
+        }
+
+        #red {
+            margin-bottom: 20px;
+            background-color: var(--red-signal);
+            border-color: var(--red-signal);
+            box-shadow: var(--box-shadow) var(--red-signal);
+        }
+
+        #green {
+            background-color: var(--green-signal);
+            border-color: var(--green-signal);
+            box-shadow: var(--box-shadow) var(--green-signal);
+        }
+
+        #stand,
+        #stand-shadow {
+            width: 50px;
+            height: 300px;
+            border: 1px solid white;
+            /* background-color: var(--background-colors); */
+            background-color: yellow;
+        }
+
+        #stand-shadow {
+            background-color: white;
+        }
+
+        .strips {
+            height: 60px;
+            border: 1px solid black;
+            transform: skew(65deg);
+            background-color: black;
+        }
+
+        #base {
+            position: fixed;
+            z-index: 1;
+            border: 1px solid white;
+            height: 25px;
+            width: 200px;
+            border-radius: 20px;
+            background-color: var(--background-colors);
+            margin-top: 800px;
+        }
+
+        .container-shadow {
+            transform: skew(311deg) scale(0.7) translate(250px, 170px);
+            filter: blur(10px);
+        }
+
+        .shadow-div {
+            background-color: var(--background-colors);
+        }
+    </style>
+</head>
+
+<body>
+        <div class="container">
+            <div id="main_box">
+                <div id="red"></div>
+                <div id="green"></div>
+            </div>
+            <div id="stand">
+                <div class="strips"></div>
+                <div class="strips"></div>
+                <div class="strips"></div>
+                <div class="strips"></div>
+                <div class="strips"></div>
+            </div>
+            <div id="base"></div>
+        </div>
+
+        <div class="container container-shadow">
+            <div id="main_box">
+            </div>
+            <div id="stand-shadow">
+            </div>
+            <div id="base"></div>
+        </div>
+</body>
+
+</html>

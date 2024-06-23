@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+#container{
+    border: 1px solid black;
+}
+
+#navbar{
+    overflow: auto;
+    padding: 25px;
+    background-color: black;
+    display: flex;
+    border: 1px dashed black;
+    justify-content: center;
+}
+
+li{
+    list-style-type: none;
+    color: white;
+    font-size: 4rem;
+    float: left;
+    margin: 0px 40px;
+    font-family: 'Soria';
+    font-weight: bold;  
+    border: 1px solid black;
+    padding: 20px;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+li:hover{
+    border: 1px solid white;
+}
+@media (max-width:1024px) {
+    li{
+        font-size: 2.5rem;
+    }
+}
+@media (max-width:768px) {
+    li{
+        font-size: 2rem;
+    }
+}
+@media (max-width:640px) {
+    li{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width:480px) {
+    #navbar{
+        justify-content: left;
+    }
+    ul{
+        margin-left: 50px;
+    }
+    li{
+        margin: 20px 0px;
+        float: none;
+        font-size: 2rem;
+    }
+}

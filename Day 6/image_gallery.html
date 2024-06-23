@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery | transition</title>
+    <style>
+        img{
+            height: 300px;
+            width: 300px;
+        }
+        #img_2{
+            transform: translateX(-303px);
+            opacity: 1;
+            transition-property: all;
+            transition-duration: 1s ;
+        }
+        #img_2:hover{
+            opacity: 0;
+
+        }
+        #img1{
+            height: 300px;
+            width: 200px;
+            border: 1px solid black;
+            background-image: url(pexels-eberhardgross-1366909.jpg);
+            background-size: cover;
+            transition-property: all;
+            transition-duration: 1s;
+        }
+        #img1:hover{
+            background-image: url(/pexels-michael-block-1691617-3225517.jpg);
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+            <img src="./pexels-eberhardgross-1366909.jpg" alt="" id="img_1">
+            <img src="./pexels-michael-block-1691617-3225517.jpg" alt="" id="img_2">
+            <div id="img1">
+
+            </div>
+    </div>
+    
+</body>
+</html>
