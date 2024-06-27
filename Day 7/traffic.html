@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Light using Animations</title>
+    <style>
+        body {
+            background-color: black;
+            height: 96vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #container {
+            height: 602px;
+            width: 300px;
+            border: 1px solid white;
+            padding: 20px;
+        }
+        #red, #green {
+            height: 300px;
+            width: 300px;
+            border-radius: 100%;
+        }
+        #red {
+            background-color: red;
+            margin-bottom: 10px;
+            animation-name: signal_change;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-delay: 3s;
+            box-shadow: 0px 0px 50px red;
+            opacity: 0;
+        }
+        #green {
+            background-color: green;
+            animation-name: signal_change;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            animation-delay: 3s;
+            box-shadow: 0px 0px 50px green;
+            opacity: 1;
+        }
+        @keyframes signal_change {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="red"></div>
+        <div id="green"></div>
+    </div>
+</body>
+</html>
