@@ -1,0 +1,6 @@
+There are 2 types of Translators:
+    1. Compiler (Lower level programming languages):
+        - All the Execution is done together
+    2. Interpreter (Mid level - Higher level programming languages)
+        - Step by Step Execution
+
