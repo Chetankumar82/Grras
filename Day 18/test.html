@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Congratulations, your data has been stored</h1>
+    <h3>Kindly, verify your data</h3>
+    <ul id="data">
+
+    </ul>
+    <a href="index.html">Edit</a>
+    <script>
+        let output_string = ""
+        // console.log(localStorage.getItem('uData'))
+        let uData = JSON.parse(localStorage.getItem("uData"))
+        console.log(uData)
+        for (const key in uData) {
+            if (Object.hasOwnProperty.call(uData, key)) {
+                const element = uData[key];
+                // console.log(element)
+                output_string += `<li> ${key} -> ${element} </li>`
+            }
+        }
+        console.log(output_string)
+        document.getElementById("data").innerHTML = output_string
+    </script>
+</body>
+</html>

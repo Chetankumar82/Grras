@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #demo {
+            background-color: black;
+            color: white;
+        }
+        #modi {
+            background-color: yellow;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="demo">Hello world</h1>
+    <button onclick="changeID()">Change ID</button>
+    <h1 id="demo">How are you?</h1>
+
+    <script>
+        console.log(document.getElementsByTagName("h1")[0].id)
+
+        document.getElementsByTagName("h1")[0].innerText = "How are you?"
+        console.log(document.getElementsByTagName("h1")[0].id)
+
+
+        console.log(document.getElementsByTagName("h1")[0].innerText)
+
+        function changeID() {
+            document.getElementsByTagName("h1")[0].id = "modi"
+            console.log(document.getElementsByTagName("h1")[0].id)
+        }
+
+    </script>
+</body>
+</html>

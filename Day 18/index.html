@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data Handling</title>
+</head>
+<body>
+    <input type="text" id="username" placeholder="User Name">
+    <br> <br>
+    <input type="number" id="age" placeholder="Age">
+    <br><br>
+    <input type="email" id="email" placeholder="E-mail">
+    <br><br>
+    <input type="password" id="password" placeholder="Password">
+    <input type="button" id="show-btn" value="Show Password" onclick="passwordManager()">
+    <br><br>
+    <input type="date" id="dob">
+    <br><br>
+    <input type="color" id="clr">
+    <br><br>
+    <select id="country">
+        <option>--Select your value--</option>
+        <option>India</option>
+        <option>USA</option>
+        <option>China</option>
+    </select>
+    <br><br>
+    <label>Gender</label>
+    <input type="radio" id="gender" name="gender" value="female"> <label>Female</label>
+    <input type="radio" id="gender" name="gender" value="male"> <label>Male</label>
+    <br><br>
+    <label>Programming Languages</label>
+    <br>
+    <input type="checkbox" id="prog_lang" name="prog_lang" value="js"> <label>JS</label>
+    <input type="checkbox" id="prog_lang" name="prog_lang" value="python"> <label>Python</label>
+    <input type="checkbox" id="prog_lang" name="prog_lang" value="java"> <label>Java</label>
+    <br><br>
+    <input type="button" value="Store" onclick="storeData()">
+    <script>
+        function storeData() {
+            let username = document.getElementById("username").value
+            let age = document.getElementById("age").value
+            let email = document.getElementById("email").value
+            let password = document.getElementById("password").value
+            let dob = document.getElementById("dob").value
+            let color = document.getElementById("clr").value
+            let country = document.getElementById("country").value
+            // !let gender = document.getElementById("gender").value -> this is the wrong method
+            let gender = document.querySelector("input[type='radio']:checked").value
+            let prog = document.querySelectorAll("input[type='checkbox']:checked")
+            let prog_final = []
+            for(let i=0; i<prog.length; i++) {
+                prog_final = [...prog_final, prog[i].value]
+            }
+            // console.log("Data stored", val)
+            // console.log(username, age, email, password)
+            // console.log(username, age, email, password, dob, color, country, gender)
+            // console.log(gender)
+            // console.log(prog)
+            let uData = {
+                "username":username,
+                "age":age,
+                "email":email,
+                "password":password,
+                "dob":dob,
+                "color":color,
+                "country":country,
+                "gender":gender,
+                "prog":prog_final
+            }
+            // uData = JSON.stringify(uData)
+            // console.log(uData)
+            // console.log(JSON.parse(uData))
+            localStorage.setItem('uData', JSON.stringify(uData))
+        }
+
+        function passwordManager() {
+            let getType = document.getElementById("password"),
+            show_btn = document.getElementById("show-btn")
+            if(getType.type == "password") {
+                getType.type = "text"
+                show_btn.value = "Hide Password"
+            } else {
+                getType.type = "password"
+                show_btn.value = "Show Password"
+            }
+        }
+    </script>
+</body>
+</html>
