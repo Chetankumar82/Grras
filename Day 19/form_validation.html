@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation | Events</title>
+</head>
+<body>
+    <input type="text" name="userName" id="userName" placeholder="User Name">
+    <script>
+        let userName = document.getElementById("userName")
+        userName.addEventListener("focusout",()=>{
+            console.log("Deselected")
+            let data = userName.value 
+            if(data==""){
+                userName.style.borderColor = "red"
+            }else{
+
+                userName.style.borderColor = "gray"
+            }
+        })
+    </script>
+</body>
+</html>

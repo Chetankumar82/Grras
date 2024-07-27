@@ -1,0 +1,29 @@
+body{
+    background-color: black;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container{
+    width: 500px;
+    height: 300px;
+    border: 1px solid white;
+}
+
+#red ,#green{
+    height:100px;
+    width: 100px;
+    border-radius: 100%;
+}
+
+#red{
+    background-color: red;
+    border-color: red;
+}
+
+#green{
+    background-color: green;
+    border-color: green;
+}
