@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        div {
+        border: 1px solid black;
+        height: 300px;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Hello <i>world</i></h1>
+        <!-- <input type="text" name="u" id="u"> -->
+    </div>
+    <script>
+        $("document").ready(()=>{
+            // console.log("Hello")
+            // console.log($("h1").html())
+            // console.log($('h1').text())
+            // $("h1").html("Hello <u>World</u>")
+            // $("h1").text("Today is a fine day")
+
+            $("div").click(function() {
+                // $("h1").hide(2000)
+                // $("h1").hide("fast")
+                // $("h1").slideUp()
+                // $("h1").toggle()
+                // $("h1").slideToggle(2000)
+                // $("h1").animate({
+                //     fontSize: "3rem",
+                //     right: "500px"
+                // }, 1000)
+
+                // $("h1").css({
+                //     color: "red",
+                //     fontSize: "3rem"
+                // })
+
+                // console.log($("#u").val())
+
+                $("h1").append(" MERN")
+                $("h1").prepend("Today ")
+            })
+
+            $("div").dblclick(function() {
+                // $("h1").show(1000)
+                // $("h1").show("slow")
+                // $("h1").slideDown()
+            })
+        })
+    </script>
+</body>
+</html>
